@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Alert</title>
+</head>
+<body>
+    <input type="text" id="in">
+    <button onclick="showAlert()">Show Text</button>
+
+    <script>
+        function showAlert() {
+            var a = document.getElementById("in").value;
+            a = a.split("").reverse().join("");
+            window.alert(a);
+        }
+    </script>
+</body>
+</html>

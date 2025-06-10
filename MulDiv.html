@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Alert</title>
+</head>
+<body>first number:
+    <input type="text" id="in1"><br>second number:
+    <input type="text" id="in2">
+    <p>Result is:</p>
+    <p id="show"></p>
+    <button onclick="mul()">multiply</button>
+    <button onclick="divi()">divide</button>
+    <script>
+        function mul() {
+            var a = parseInt(document.getElementById("in1").value);
+            var b = parseInt(document.getElementById("in2").value);
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("show").innerText = "Please enter valid numbers.";
+            } else {
+                document.getElementById("show").innerText = a * b;
+            }
+        }
+
+         function divi() {
+            var a = parseFloat(document.getElementById("in1").value);
+            var b = parseFloat(document.getElementById("in2").value);
+            
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("show").innerText = "Please enter valid numbers.";
+            } else if (b === 0) {
+                document.getElementById("show").innerText = "Cannot divide by zero.";
+            } else {
+                document.getElementById("show").innerText = a / b;
+            }
+        }
+    </script>
+</body>
+</html>
